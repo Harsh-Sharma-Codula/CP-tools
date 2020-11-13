@@ -8,6 +8,6 @@ int main(int argc, char const *argv[])
 	file+=argv[1];
 	const char *command = file.c_str();
 	system(command);
-	cout<<"Compiling Finished\n";
+	cout<<"Done\n";
 	return 0;
 }
