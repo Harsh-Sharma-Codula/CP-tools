@@ -6,7 +6,7 @@
 #This script will Parse The input and Output
 #USE:
 #python3 parse.py <Folder-Name> <Problem-Name>
-#List 7175 as a port in competitive companion.
+#List 8625 as a port in competitive companion.
 #Go to any problem and press the comcompetitive companion icon.
 
 
@@ -17,9 +17,9 @@ import datetime
 import os
 import sys
 
-PORT = 7175
+port1 = 8625
 
-def createNewTask(data):
+def PARSEIT(data):
 	taskData = json.loads(data.decode())
 		# print(subprocess.check_output(['subl' , os.path.join(baseContestPath , contestName , taskName + '.cpp')]))
 	with open("C:\\Users\\Harsh\\Documents\\contest\\cache.json","wb") as cache:
@@ -37,11 +37,11 @@ def createNewTask(data):
 		a+=1
 	
 
-app = Flask(__name__)
+personalparser = Flask(__name__)
 
 @app.route('/' , methods = ['POST'])
 def getData():
-	createNewTask(request.data)
+	PARSEIT(request.data)
 	return redirect('/')
 
-app.run(port=PORT)
+personalparser.run(port=port1)
