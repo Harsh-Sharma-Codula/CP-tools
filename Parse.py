@@ -39,7 +39,7 @@ def PARSEIT(data):
 
 personalparser = Flask(__name__)
 
-@app.route('/' , methods = ['POST'])
+@personalparser.route('/' , methods = ['POST'])
 def getData():
 	PARSEIT(request.data)
 	return redirect('/')
