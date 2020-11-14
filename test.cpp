@@ -1,3 +1,8 @@
+#Usage:
+#	test <number-of-io(input,output)-files>
+
+
+
 #include"bits/stdc++.h"
 
 using namespace std;
